@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+}
+
+p {
+  flex: 1;
+  margin: 7px;
+}
+
+span {
+  margin: 7px;
+}
+
+.selected {
+  background: #00adf1;
+}

@@ -1,0 +1,26 @@
+<mat-grid-list cols="2" rowHeight="350px">
+  @for (table of tables() ; track idx; let idx = $index) {
+    @let items = table['items'];
+    @let tableId = idx + 1;
+    <mat-grid-tile (click)="select(tableId)">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title># {{tableId}}</mat-card-title>
+          @if (items) {
+            <mat-card-subtitle>{{getTotal(items) | currency}}</mat-card-subtitle>
+          }
+        </mat-card-header>
+        <mat-card-content>
+          <mat-divider />
+          <mat-list>
+            @for (item of items; track $index) {
+              <mat-list-item>
+                {{item.name}} x {{item.qty}}
+              </mat-list-item>
+            }
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  }
+</mat-grid-list>

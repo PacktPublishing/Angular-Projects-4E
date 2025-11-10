@@ -1,0 +1,8 @@
+<p [class.selected]="qty()">{{name()}}</p>
+<button mat-icon-button>
+  <mat-icon (click)="add()">add</mat-icon>
+</button>
+<span>{{qty()}}</span>
+<button (click)="subtract()" [disabled]="!qty()" mat-icon-button>
+  <mat-icon>remove</mat-icon>
+</button>

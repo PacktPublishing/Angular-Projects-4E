@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>
+  # {{data}}
+</h2>
+<mat-dialog-content>
+  <mat-list>
+    @for (m of menu; track $index) {
+      <div mat-subheader>{{m.name}}</div>
+      @for (item of m.items; track $index) {
+        <mat-list-item>
+          <app-order-item [name]="item.name" />
+        </mat-list-item>
+      }
+      <mat-divider />
+    }
+  </mat-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-flat-button (click)="ok()">Ok</button>
+</mat-dialog-actions>
