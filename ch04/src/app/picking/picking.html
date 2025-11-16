@@ -1,0 +1,12 @@
+<ngx-scanner-qrcode />
+<h2>Picking List</h2>
+<div class="picking-list">
+  @for (item of items(); track $index) {
+    <p class="picking-item">
+      {{item.title}}
+    </p>
+  }
+</div>
+<hr />
+<p>Total items: {{items().length}}</p>
+<p>Total cost: {{cost() | currency}}</p>

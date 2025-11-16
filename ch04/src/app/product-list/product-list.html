@@ -1,0 +1,7 @@
+<div class="pill-group">
+  @for (item of products() | slice:0:6; track item.title) {
+    <a class="pill" [routerLink]="item.id.toString()">
+      <span>{{ item.title }}</span>
+    </a>
+  }
+</div>
