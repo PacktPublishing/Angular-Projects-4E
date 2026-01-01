@@ -1,0 +1,47 @@
+<form nz-form #ticketForm="ngForm" (ngSubmit)="add()">
+  <nz-form-item>
+    <nz-form-label nzFor="plateNo" nzRequired>
+      Plate number
+    </nz-form-label>
+    <nz-form-control>
+      <input nz-input name="plateNo" id="plateNo" [(ngModel)]="plateNo" required />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label nzRequired>Arrival</nz-form-label>
+    <nz-form-control>
+      <nz-date-picker name="arrival" nzShowTime [(ngModel)]="arrival" required />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label nzFor="location" nzRequired>
+      Location
+    </nz-form-label>
+    <nz-form-control>
+      <input nz-input name="location" id="location" [(ngModel)]="location" required />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control>
+      <button
+        nz-button
+        nzType="primary"
+        type="submit"
+        [disabled]="ticketForm.invalid"
+      >Submit</button>
+      <button
+        nz-button
+        nzType="link"
+        type="button"
+        (click)="isVisible.set(true)"
+        >AI Creator
+      </button>
+    </nz-form-control>
+  </nz-form-item>
+</form>
+<nz-modal [(nzVisible)]="isVisible" nzTitle="AI Creator" (nzOnCancel)="isVisible.set(false)" (nzOnOk)="ok()">
+  <ng-container *nzModalContent>
+    <textarea [(ngModel)]="prompt" rows="3" placeholder="Enter ticket details" nz-input>
+    </textarea>
+  </ng-container>
+</nz-modal>
