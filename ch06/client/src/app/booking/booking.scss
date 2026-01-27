@@ -1,0 +1,33 @@
+.container {
+  max-width: 20rem;
+}
+
+.control {
+  padding: 0.25rem;
+
+  * {
+    margin: 0.25rem;
+  }
+}
+
+.date-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 600px;
+}
+
+.p-selectbutton {
+  flex-direction: column;
+  flex-grow: 0.5;
+}
+
+::ng-deep .p-selectbutton .p-togglebutton {
+  border-width: 1px !important;
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}

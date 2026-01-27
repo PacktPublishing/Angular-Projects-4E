@@ -1,0 +1,48 @@
+<p-stepper [value]="1">
+  <p-step-list>
+    <p-step [value]="1">Basic info</p-step>
+    <p-step [value]="2">Date/Time</p-step>
+    <p-step [value]="3" (click)="getRooms()">Room</p-step>
+  </p-step-list>
+  <p-step-panels>
+    <p-step-panel [value]="1">
+      <ng-template #content>
+        <div class="container">
+          <div class="control">
+            <label for="name">Name</label>
+            <input [(ngModel)]="name" pInputText id="name" fluid />
+          </div>
+          <div class="control">
+            <label for="email">Email</label>
+            <input [(ngModel)]="email" pInputText id="email" fluid />
+          </div>
+        </div>
+      </ng-template>
+    </p-step-panel>
+    <p-step-panel [value]="2">
+      <ng-template #content>
+        <div class="date-container">
+          <p-datepicker [(ngModel)]="date" [inline]="true" />
+          <p-selectbutton
+            [options]="slots()" [(ngModel)]="time"
+          />
+        </div>
+      </ng-template>
+    </p-step-panel>
+    <p-step-panel [value]="3">
+      <ng-template #content>
+        <div class="control">
+          <label>Room no</label>
+          <p-select [options]="rooms()" [(ngModel)]="room" />
+        </div>
+      @if (msg()) {
+        <p-message>{{msg()}}</p-message>
+      } @else {
+        <div class="action">
+          <p-button label="Save" size="small" (click)="save()" />
+        </div>
+      }
+      </ng-template>
+    </p-step-panel>
+  </p-step-panels>
+</p-stepper>
