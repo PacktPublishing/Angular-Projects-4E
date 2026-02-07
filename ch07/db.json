@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/json-server/schema.json",
+  "buildings": [
+    {
+      "id": "1",
+      "address": "Athens, Greece",
+      "apartments": 10
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+mat-card-content {
+  margin-top: 1rem;
+}
+
+mat-expansion-panel mat-form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
