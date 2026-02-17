@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+}
+
+kendo-listview {
+  margin-right: 1rem;
+  background: transparent;
+}
+
+kendo-card {
+  margin-top: 2rem;
+}
+
+.info {
+  display: flex;
+  width: 100px;
+  height: 40px;
+  padding: 4px 24px;
+  align-items: center;
+  border-radius: 4px;
+  background-color: rgb(133, 133, 247);
+}
+
+.drop-zone {
+  height: 100%;
+}

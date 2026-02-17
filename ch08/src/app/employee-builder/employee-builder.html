@@ -1,0 +1,26 @@
+<div class="container">
+  <kendo-label text="Full Name">
+    <kendo-textbox [(ngModel)]="name" />
+  </kendo-label>
+  <kendo-label text="Color">
+    <div>
+      <kendo-colorpicker activeView="palette" [(ngModel)]="color" />
+    </div>
+  </kendo-label>
+</div>
+<div class="container">
+  <kendo-label text="Age (18-65)">
+    <kendo-numerictextbox
+      format="n0"
+      [autoCorrect]="true"
+      [min]="18"
+      [max]="65"
+      [(ngModel)]="age" />
+  </kendo-label>
+  <kendo-label text="Job">
+    <kendo-combobox
+      [data]="['Electrician', 'Technician', 'Plumber']"
+      [(ngModel)]="job" />
+  </kendo-label>
+</div>
+<button kendoButton (click)="save()">Save</button>

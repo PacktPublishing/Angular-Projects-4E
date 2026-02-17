@@ -1,0 +1,41 @@
+<div class="container">
+  <kendo-listview
+    [data]="employees()"
+    kendoDragTargetContainer
+    dragTargetFilter=".k-listview-item"
+    [hint]="{ hintTemplate: info }"
+    (onDragStart)="selected.set($event.dragTarget.outerText.split('\n')[0])">
+    <ng-template kendoListViewItemTemplate let-employee="dataItem">
+      <kendo-card width="200px" [style.background]="employee.color">
+        <kendo-card-header>
+          <h1 kendoCardTitle>{{ employee.name }}</h1>
+          <p kendoCardSubtitle>{{ employee.job }}</p>
+        </kendo-card-header>
+      </kendo-card>
+    </ng-template>
+  </kendo-listview>
+  <kendo-scheduler
+    #scheduler
+    dropTargetFilter=".drop-zone"
+    kendoDropTargetContainer
+    (onDrop)="addShift($event)"
+    [showWorkHours]="true"
+    [allDaySlot]="false"
+    workDayStart="08:00"
+    workDayEnd="16:00"
+    [weekStart]="1"
+    [hiddenDays]="hiddenDays"
+    [kendoSchedulerBinding]="shifts"
+    [kendoSchedulerReactiveEditing]="createShift"
+    [eventStyles]="getEventStyles"
+    [resources]="resources">
+      <ng-template kendoSchedulerTimeSlotTemplate let-date="date">
+        <div class="drop-zone" [attr.date]="date"></div>
+      </ng-template>
+    <kendo-scheduler-day-view />
+    <kendo-scheduler-week-view />
+  </kendo-scheduler>
+  <ng-template #info>
+    <p class="info">{{ selected() }}</p>
+  </ng-template>
+</div>

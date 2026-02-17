@@ -1,0 +1,13 @@
+.container {
+  margin: 1rem;
+  display: flex;
+  gap: 2rem;
+
+  & * {
+    flex: 1;
+  }
+}
+
+button {
+  margin: 1rem;
+}
