@@ -1,0 +1,156 @@
+{
+  "$schema": "./node_modules/json-server/schema.json",
+  "categories": [
+    { "id": "1", "name": "Appetizers" },
+    { "id": "2", "name": "Salads" },
+    { "id": "3", "name": "Seafood" },
+    { "id": "4", "name": "Fish" },
+    { "id": "5", "name": "Drinks" }
+  ],
+  "items": [
+    {
+      "id": "1",
+      "data": [
+        {
+          "id": "10",
+          "name": "Fried Cheese",
+          "price": 5.5
+        },
+        {
+          "id": "11",
+          "name": "French fries",
+          "price": 4.5
+        },
+        {
+          "id": "12",
+          "name": "Cheese Pie",
+          "price": 5.5
+        },
+        {
+          "id": "13",
+          "name": "Crab salas",
+          "price": 5
+        },
+        {
+          "id": "14",
+          "name": "Tzatziki",
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "data": [
+        {
+          "id": "20",
+          "name": "Greek salad",
+          "price": 7
+        },
+        {
+          "id": "21",
+          "name": "Cretan dakos",
+          "price": 7
+        },
+        {
+          "id": "22",
+          "name": "Beetroots",
+          "price": 5
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "data": [
+        {
+          "id": "30",
+          "name": "Shrimp pasta",
+          "price": 15,
+          "discount": 0.2
+        },
+        {
+          "id": "31",
+          "name": "Grilled octopus",
+          "price": 15
+        },
+        {
+          "id": "32",
+          "name": "Grilled cuttlefish",
+          "price": 9.5
+        },
+        {
+          "id": "33",
+          "name": "Fried squid",
+          "price": 9.5
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "data": [
+        {
+          "id": "40",
+          "name": "Red mullet",
+          "price": 14
+        },
+        {
+          "id": "41",
+          "name": "Anchovy",
+          "price": 7
+        },
+        {
+          "id": "42",
+          "name": "Sardine",
+          "price": 8,
+          "discount": 0.2
+        },
+        {
+          "id": "43",
+          "name": "Blue whiting",
+          "price": 8
+        },
+        {
+          "id": "44",
+          "name": "Codfish",
+          "price": 9
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "data": [
+        {
+          "id": "50",
+          "name": "Mineral water",
+          "price": 1.8
+        },
+        {
+          "id": "51",
+          "name": "Soda",
+          "price": 2
+        },
+        {
+          "id": "52",
+          "name": "Ouzo",
+          "price": 9,
+          "discount": 0.5
+        },
+        {
+          "id": "53",
+          "name": "Beer",
+          "price": 4,
+          "discount": 0.5
+        },
+        {
+          "id": "54",
+          "name": "Red wine",
+          "price": 4.5
+        },
+         {
+          "id": "55",
+          "name": "White wine",
+          "price": 4.5
+        }
+      ]
+    }
+  ]
+}

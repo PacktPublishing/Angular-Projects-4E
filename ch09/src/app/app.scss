@@ -1,0 +1,27 @@
+.btn-category {
+  padding: 1rem;
+  width: 8rem;
+}
+
+.grid {
+  padding-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.col-2 {
+  flex: 0 0 auto;
+  padding: .5rem;
+  width: 12%;
+}
+
+.btn-item {
+  padding: 3rem;
+  width: 100%;
+  max-height: 2rem;
+}
+
+i {
+  font-size: 2rem;
+}

@@ -1,0 +1,26 @@
+<p-drawer
+  [(visible)]="visible"
+  header="Cart"
+  position="right">
+  <p-table [value]="cart()">
+     <ng-template #body let-item>
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.qty }}</td>
+      </tr>
+    </ng-template>
+    <ng-template #footer>
+      <tr class="font-bold">
+        <td>Total</td>
+        <td>{{ cost() | currency}}</td>
+      </tr>
+      <tr class="font-bold">
+        <td>Discount</td>
+        <td>{{ discount() | currency }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <ng-template #footer>
+    <p-button label="Checkout" icon="pi pi-money-bill" size="large" (click)="checkout.emit()" />
+  </ng-template>
+</p-drawer>

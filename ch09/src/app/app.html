@@ -1,0 +1,29 @@
+<chapter-title [chapterTitle]="title()" />
+<p-menubar [model]="categories()">
+  <ng-template #item let-category>
+    <button class="btn-category" pButton>
+      {{ category.label }}
+    </button>
+  </ng-template>
+  <button pButton severity="secondary" (click)="isCartVisible.set(true)">
+    <p-overlaybadge
+      [value]="selectedItems().length"
+      badgeSize="large">
+      <i class="pi pi-shopping-cart"></i>
+    </p-overlaybadge>
+  </button>
+</p-menubar>
+<div class="grid">
+  @for(item of items(); track $index) {
+    <div class="col-2">
+      <button pButton class="btn-item" severity="info" (click)="addToCart(item)">
+        {{ item.name }}
+      </button>
+    </div>
+  }
+</div>
+<app-cart
+  [items]="selectedItems()"
+  [(visible)]="isCartVisible"
+  (checkout)="clear()"
+/>
