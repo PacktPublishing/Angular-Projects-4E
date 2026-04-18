@@ -42,10 +42,13 @@ export class AiService {
   }
 
   async ask(prompt: string) {
-    const response = await this.ai.generate({
+    const resp = await this.ai.generate({
       prompt,
       tools: [this.tool]
     });
-    return { message: response.text };
+    const msg = resp.messages.filter(m => m.role === 'tool');
+    return {
+      message: msg[0].content[0].toolResponse?.output
+    };
   }
 }

@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { Data } from './data';
 import { ToolbarModule } from 'primeng/toolbar';
-import { ButtonModule } from "primeng/button";
+import { ButtonModule } from 'primeng/button';
 import { PopoverModule } from 'primeng/popover';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
