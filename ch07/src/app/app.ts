@@ -16,7 +16,7 @@ export class App {
 
   constructor() {
     this.chapterTitleService.setTitle(
-      'Chapter 4: Expense Builder'
+      'Chapter 7: Expense Builder'
     );
   }
 

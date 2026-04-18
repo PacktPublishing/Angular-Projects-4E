@@ -10,49 +10,33 @@
     "serve:ssr:my-app": "node dist/my-app/server/server.mjs",
     "start:server": "json-server db.json"
   },
-  "prettier": {
-    "printWidth": 100,
-    "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
-  },
   "private": true,
-  "packageManager": "npm@10.9.3",
+  "packageManager": "npm@11.11.0",
   "dependencies": {
-    "@angular/cdk": "^21.2.0-next.2",
-    "@angular/common": "^21.1.2",
-    "@angular/compiler": "^21.1.2",
-    "@angular/core": "^21.1.2",
-    "@angular/forms": "^21.1.2",
-    "@angular/material": "^21.2.0-next.2",
-    "@angular/platform-browser": "^21.1.2",
-    "@angular/platform-server": "^21.1.2",
-    "@angular/router": "^21.0.0-next.0",
-    "@angular/ssr": "^21.1.2",
+    "@angular/cdk": "^22.0.0-next.4",
+    "@angular/common": "^22.0.0-next.0",
+    "@angular/compiler": "^22.0.0-next.0",
+    "@angular/core": "^22.0.0-next.0",
+    "@angular/forms": "^22.0.0-next.0",
+    "@angular/material": "^22.0.0-next.4",
+    "@angular/platform-browser": "^22.0.0-next.0",
+    "@angular/platform-server": "^22.0.0-next.0",
+    "@angular/router": "^22.0.0-next.0",
+    "@angular/ssr": "^22.0.0-next.0",
     "express": "^5.1.0",
     "json-server": "^1.0.0-beta.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/build": "^21.1.2",
-    "@angular/cli": "^21.1.2",
-    "@angular/compiler-cli": "^21.1.2",
+    "@angular/build": "^22.0.0-next.5",
+    "@angular/cli": "^22.0.0-next.5",
+    "@angular/compiler-cli": "^22.0.0-next.0",
     "@types/express": "^5.0.1",
-    "@types/jasmine": "~5.1.0",
     "@types/node": "^20.17.19",
-    "jasmine-core": "~5.10.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.9.2"
+    "jsdom": "^28.0.0",
+    "prettier": "^3.8.1",
+    "typescript": "~6.0.2",
+    "vitest": "^4.0.8"
   }
 }

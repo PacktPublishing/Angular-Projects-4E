@@ -34,6 +34,9 @@
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
+            "security": {
+              "allowedHosts": []
+            },
             "ssr": {
               "entry": "src/server.ts"
             }
@@ -74,24 +77,8 @@
           },
           "defaultConfiguration": "development"
         },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
-        },
         "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.scss"
-            ]
-          }
+          "builder": "@angular/build:unit-test"
         }
       }
     }
