@@ -11,14 +11,7 @@ import { initializeApp } from 'firebase/app';
 
 registerLocaleData(en);
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDlJHeAp8KrkbCErI1MeQRozA3TIrJc1-w",
-  authDomain: "citypass-b299f.firebaseapp.com",
-  projectId: "citypass-b299f",
-  storageBucket: "citypass-b299f.firebasestorage.app",
-  messagingSenderId: "1047601284372",
-  appId: "1:1047601284372:web:343517b63ddd6e8300ee01"
-};
+const firebaseConfig = {};
 const firebaseApp = initializeApp(firebaseConfig);
 
 export const appConfig: ApplicationConfig = {
