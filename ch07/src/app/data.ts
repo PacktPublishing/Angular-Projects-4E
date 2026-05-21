@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { Service, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 interface Building {
@@ -7,9 +7,7 @@ interface Building {
   apartments: number;
 }
 
-@Injectable({
-  providedIn: 'root',
-})
+@Service()
 export class Data {
   private http = inject(HttpClient);
   private buildingsUrl = 'http://localhost:3000/buildings';
