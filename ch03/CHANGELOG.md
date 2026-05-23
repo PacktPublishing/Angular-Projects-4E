@@ -1,0 +1,2 @@
+- Page TBD: Replace `ng add @angular/fire` with guidance at https://firebaseopensource.com/projects/angular/angularfire2
+- Page TBD: Remove `projectNumber` and `version` from the Firebase configuration object

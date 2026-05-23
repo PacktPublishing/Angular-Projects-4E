@@ -1,0 +1,2 @@
+- Page TBD: Replace `npm install @cds/core @clr/angular @clr/ui` with `npm install @cds/core @clr/angular @clr/ui -f`
+- Page TBD: Replace `npm install @angular/animations` with `npm install @angular/animations -f`
