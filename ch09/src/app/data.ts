@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { Service, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Item } from './item';
 import { map } from 'rxjs';
@@ -8,9 +8,7 @@ interface Category {
   name: string;
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+@Service()
 export class Data {
   private http = inject(HttpClient);
 
