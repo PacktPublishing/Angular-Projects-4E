@@ -5,11 +5,11 @@
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "types": [
-      "jasmine",
-      "@angular/localize"
+      "vitest/globals"
     ]
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.d.ts",
+    "src/**/*.spec.ts"
   ]
 }

@@ -1,9 +1,7 @@
-import { Injectable, DOCUMENT, inject } from '@angular/core';
+import { Service, DOCUMENT, inject } from '@angular/core';
 import { Employee } from './employee';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Service()
 export class Employees {
   private storage = inject(DOCUMENT).defaultView!.localStorage;
 
