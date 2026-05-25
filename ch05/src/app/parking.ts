@@ -1,4 +1,4 @@
-import { inject, Inject, Service, signal } from '@angular/core';
+import { inject, Inject, Injectable, signal } from '@angular/core';
 import {
   ChatSession,
   FunctionDeclarationsTool,
@@ -10,7 +10,9 @@ import { FirebaseApp } from 'firebase/app';
 import { Ticket } from './ticket';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
 
-@Service()
+@Injectable({
+  providedIn: 'root'
+})
 export class Parking {
   readonly tickets = signal<Ticket[]>([]);
   private readonly chat: ChatSession;
